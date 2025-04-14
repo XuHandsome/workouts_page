@@ -1,3 +1,8 @@
+# other
+GPX_OUT/
+node_modules/
+run_page/data.db
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
