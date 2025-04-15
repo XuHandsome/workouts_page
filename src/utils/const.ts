@@ -62,9 +62,10 @@ const CHINESE_LOCATION_INFO_MESSAGE_FIRST =
 const CHINESE_LOCATION_INFO_MESSAGE_SECOND = '不要停下来，不要停下探索的脚步';
 
 const INFO_MESSAGE = IS_CHINESE ? CHINESE_INFO_MESSAGE : ENGLISH_INFO_MESSAGE;
-const FULL_MARATHON_RUN_TITLE = IS_CHINESE ? '全程马拉松' : 'Full Marathon';
-const HALF_MARATHON_RUN_TITLE = IS_CHINESE ? '半程马拉松' : 'Half Marathon';
+const FULL_MARATHON_RUN_TITLE = IS_CHINESE ? '全马' : 'Full Marathon';
+const HALF_MARATHON_RUN_TITLE = IS_CHINESE ? '半马' : 'Half Marathon';
 const RUN_TITLE = IS_CHINESE ? '跑步' : 'Run';
+const KEEP_RUN_TITLE = IS_CHINESE ? '跑步' : 'gpx from keep';
 const TRAIL_RUN_TITLE = IS_CHINESE ? '越野跑' : 'Trail Run';
 const SWIM_TITLE = IS_CHINESE ? '游泳' : 'Swim';
 const RIDE_TITLE = IS_CHINESE ? '骑行' : 'Ride';
@@ -95,6 +96,7 @@ const RUN_TITLES = {
   FULL_MARATHON_RUN_TITLE,
   HALF_MARATHON_RUN_TITLE,
   RUN_TITLE,
+  KEEP_RUN_TITLE,
   TRAIL_RUN_TITLE,
 
   SWIM_TITLE,

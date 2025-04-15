@@ -249,7 +249,8 @@ def parse_points_to_gpx(run_points_data, start_time, sport_type):
     gpx = gpxpy.gpx.GPX()
     gpx.nsmap["gpxtpx"] = "http://www.garmin.com/xmlschemas/TrackPointExtension/v1"
     gpx_track = gpxpy.gpx.GPXTrack()
-    gpx_track.name = "gpx from keep"
+    # gpx_track.name = "gpx from keep"
+    gpx_track.name = "跑步"
     gpx_track.type = sport_type
     gpx.tracks.append(gpx_track)
 
