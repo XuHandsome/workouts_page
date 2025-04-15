@@ -148,6 +148,7 @@ def parse_raw_data_to_nametuple(
             if with_download_gpx and str(keep_id) not in old_gpx_ids:
                 download_keep_gpx(gpx_data.to_xml(), str(keep_id))
     else:
+        # 跑步机不执行操作
         print(f"ID {keep_id} no gps data")
     polyline_str = polyline.encode(run_points_data) if run_points_data else ""
     start_latlng = start_point(*run_points_data[0]) if run_points_data else None
