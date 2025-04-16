@@ -17,7 +17,7 @@ const getBasePath = () => {
 
 const data: ISiteMetadataResult = {
   siteTitle: 'Run Run Run',
-  siteUrl: 'https://www.ohops.org',
+  siteUrl: 'https://up.ohops.org',
   logo: 'https://ocs-cn-north1.heytapcs.com/titans-usercenter-avatar-bucket-cn/zr/3t/mg/zr3tmgegc63aqavys7kvnx4f5q000000.jpg?20250316192146',
   description: 'Personal site and blog',
   keywords: 'workouts, running, cycling, riding, roadtrip, hiking, swimming',
