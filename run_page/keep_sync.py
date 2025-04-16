@@ -64,7 +64,7 @@ def get_to_download_runs_ids(session, headers, sport_type):
 
             for i in run_logs:
                 logs = [j["stats"] for j in i["logs"]]
-                result.extend(k["id"] for k in logs if not k["isDoubtful"])
+                result.extend(k["id"] for k in logs if not k["isDoubtful"] and k["dataType"].startswith("outdoor"))
             last_date = r.json()["data"]["lastTimestamp"]
             since_time = datetime.fromtimestamp(last_date / 1000, tz=timezone.utc)
             print(f"pares keep ids data since {since_time}")
@@ -249,8 +249,7 @@ def parse_points_to_gpx(run_points_data, start_time, sport_type):
     gpx = gpxpy.gpx.GPX()
     gpx.nsmap["gpxtpx"] = "http://www.garmin.com/xmlschemas/TrackPointExtension/v1"
     gpx_track = gpxpy.gpx.GPXTrack()
-    # gpx_track.name = "gpx from keep"
-    gpx_track.name = "跑步"
+    gpx_track.name = "gpx from keep"
     gpx_track.type = sport_type
     gpx.tracks.append(gpx_track)
 
