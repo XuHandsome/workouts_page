@@ -113,6 +113,7 @@ jobs:
         if: env.RUN_TYPE == 'keep_to_strava_sync'
         run: |
           python run_page/keep_to_strava_sync.py ${{ secrets.KEEP_MOBILE }} ${{ secrets.KEEP_PASSWORD }} ${{ secrets.STRAVA_CLIENT_ID }} ${{ secrets.STRAVA_CLIENT_SECRET }} ${{ secrets.STRAVA_CLIENT_REFRESH_TOKEN }}
+
       - name: Run sync Strava script
         if: env.RUN_TYPE == 'strava'
         run: |
