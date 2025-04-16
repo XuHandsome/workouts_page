@@ -64,7 +64,11 @@ def get_to_download_runs_ids(session, headers, sport_type):
 
             for i in run_logs:
                 logs = [j["stats"] for j in i["logs"]]
-                result.extend(k["id"] for k in logs if not k["isDoubtful"] and k["dataType"].startswith("outdoor"))
+                result.extend(
+                    k["id"]
+                    for k in logs
+                    if not k["isDoubtful"] and k["dataType"].startswith("outdoor")
+                )
             last_date = r.json()["data"]["lastTimestamp"]
             since_time = datetime.fromtimestamp(last_date / 1000, tz=timezone.utc)
             print(f"pares keep ids data since {since_time}")
