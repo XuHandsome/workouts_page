@@ -3,6 +3,7 @@ GPX_OUT/
 node_modules/
 run_page/data.db
 .DS_Store
+src/static/activities.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
