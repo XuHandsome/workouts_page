@@ -108,12 +108,11 @@ jobs:
         run: |
           python run_page/coros_sync.py ${{ secrets.COROS_ACCOUNT }} ${{ secrets.COROS_PASSWORD }}
 
+      # 同步keep数据到strava中, 已经修改keep_to_strava_sync, 默认running cycling
       - name: Run sync Keep_to_strava script
         if: env.RUN_TYPE == 'keep_to_strava_sync'
         run: |
           python run_page/keep_to_strava_sync.py ${{ secrets.KEEP_MOBILE }} ${{ secrets.KEEP_PASSWORD }} ${{ secrets.STRAVA_CLIENT_ID }} ${{ secrets.STRAVA_CLIENT_SECRET }} ${{ secrets.STRAVA_CLIENT_REFRESH_TOKEN }}
-        # 先同步keep数据到strava中, 已经修改keep_to_strava_sync, 默认running cycling
-
       - name: Run sync Strava script
         if: env.RUN_TYPE == 'strava'
         run: |
