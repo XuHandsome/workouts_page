@@ -2,6 +2,7 @@
 GPX_OUT/
 node_modules/
 run_page/data.db
+.DS_Store
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
