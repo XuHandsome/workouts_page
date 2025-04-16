@@ -63,8 +63,8 @@ if __name__ == "__main__":
         "--sync-types",
         dest="sync_types",
         nargs="+",
-        default=["running"],
-        help="sync sport types from keep, default is running, you can choose from running, hiking, cycling",
+        default=["running", "cycling"],
+        help="sync sport types from keep, default is running+cycling, you can choose from running, hiking, cycling",
     )
 
     options = parser.parse_args()
@@ -72,6 +72,7 @@ if __name__ == "__main__":
         assert (
             _tpye in KEEP_SPORT_TYPES
         ), f"{_tpye} are not supported type, please make sure that the type entered in the {KEEP_SPORT_TYPES}"
+    # 从keep获取数据
     new_tracks = run_keep_sync(
         options.phone_number, options.password, options.sync_types, True
     )
@@ -86,6 +87,7 @@ if __name__ == "__main__":
     index = 1
     print(f"Up to {len(new_tracks)} files are waiting to be uploaded")
     uploaded_file_paths = []
+    # 从keep获取到的数据, 遍历上传
     for track in new_tracks:
         if track.gpx_file_path is not None:
             try:
