@@ -11,10 +11,9 @@ from keep_sync import KEEP_SPORT_TYPES, get_all_keep_tracks
 
 """
 
+
 def run_keep_sync(email, password, keep_sports_data_api):
-    _new_tracks = get_all_keep_tracks(
-        email, password, [], keep_sports_data_api, True
-    )
+    _new_tracks = get_all_keep_tracks(email, password, [], keep_sports_data_api, True)
     new_tracks = []
     for track in _new_tracks:
         # By default only outdoor sports have latlng as well as GPX.
