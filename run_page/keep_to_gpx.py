@@ -12,8 +12,8 @@ from keep_sync import KEEP_SPORT_TYPES, get_all_keep_tracks
 """
 
 
-def run_keep_sync(email, password, keep_sports_data_api):
-    _new_tracks = get_all_keep_tracks(email, password, [], keep_sports_data_api, True)
+def run_keep_sync(email, password, keep_sports_data_api, tracks_ids):
+    _new_tracks = get_all_keep_tracks(email, password, [], tracks_ids, keep_sports_data_api, True)
     new_tracks = []
     for track in _new_tracks:
         # By default only outdoor sports have latlng as well as GPX.
@@ -40,6 +40,13 @@ if __name__ == "__main__":
         default=["hiking"],
         help="sync sport types from keep, default is running+cycling, you can choose from running, hiking, cycling",
     )
+    parser.add_argument(
+        "--tracks-ids",
+        dest="tracks_ids",
+        nargs="+",
+        default=[],
+        help="appoint list of you want download tracks, default download all",
+    )
 
     options = parser.parse_args()
     for _tpye in options.sync_types:
@@ -48,5 +55,5 @@ if __name__ == "__main__":
         ), f"{_tpye} are not supported type, please make sure that the type entered in the {KEEP_SPORT_TYPES}"
     # 从keep获取数据
     new_tracks = run_keep_sync(
-        options.phone_number, options.password, options.sync_types
+        options.phone_number, options.password, options.sync_types, options.tracks_ids
     )

@@ -22,7 +22,7 @@ My own best practices:
 KEEP2STRAVA_BK_PATH = os.path.join(OUTPUT_DIR, "keep2strava.json")
 
 
-def run_keep_sync(email, password, keep_sports_data_api, with_download_gpx=False):
+def run_keep_sync(email, password, keep_sports_data_api):
     if not os.path.exists(KEEP2STRAVA_BK_PATH):
         file = open(KEEP2STRAVA_BK_PATH, "w")
         file.close()
@@ -35,7 +35,7 @@ def run_keep_sync(email, password, keep_sports_data_api, with_download_gpx=False
                 content = []
     old_tracks_ids = [str(a["run_id"]) for a in content]
     _new_tracks = get_all_keep_tracks(
-        email, password, old_tracks_ids, keep_sports_data_api, True
+        email, password, old_tracks_ids, [], keep_sports_data_api, True
     )
     new_tracks = []
     for track in _new_tracks:
@@ -74,7 +74,7 @@ if __name__ == "__main__":
         ), f"{_tpye} are not supported type, please make sure that the type entered in the {KEEP_SPORT_TYPES}"
     # 从keep获取数据
     new_tracks = run_keep_sync(
-        options.phone_number, options.password, options.sync_types, True
+        options.phone_number, options.password, options.sync_types
     )
 
     # to strava.

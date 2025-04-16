@@ -23,6 +23,7 @@ KEEP2STRAVA = {
     "outdoorRunning": "Run",
     "outdoorCycling": "Ride",
     "indoorRunning": "VirtualRun",
+    "mountaineering": "Hike",
 }
 # need to test
 LOGIN_API = "https://api.gotokeep.com/v1.1/users/login"
@@ -193,7 +194,7 @@ def parse_raw_data_to_nametuple(
 
 
 def get_all_keep_tracks(
-    email, password, old_tracks_ids, keep_sports_data_api, with_download_gpx=False
+    email, password, old_tracks_ids, tracks_ids, keep_sports_data_api, with_download_gpx=False
 ):
     if with_download_gpx and not os.path.exists(GPX_FOLDER):
         os.mkdir(GPX_FOLDER)
@@ -202,7 +203,10 @@ def get_all_keep_tracks(
     tracks = []
     for api in keep_sports_data_api:
         runs = get_to_download_runs_ids(s, headers, api)
-        runs = [run for run in runs if run.split("_")[1] not in old_tracks_ids]
+        if len(tracks_ids) <= 0:
+            runs = [run for run in runs if run.split("_")[1] not in old_tracks_ids]
+        else:
+            runs = tracks_ids
         print(f"{len(runs)} new keep {api} data to generate")
         old_gpx_ids = os.listdir(GPX_FOLDER)
         old_gpx_ids = [i.split(".")[0] for i in old_gpx_ids if not i.startswith(".")]
