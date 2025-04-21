@@ -3,6 +3,7 @@
 on:
   workflow_dispatch:
   schedule:
+    # utc时间, +8后即为每天凌晨2点
     - cron: '0 18 * * *'
   push:
     branches:
