@@ -3,10 +3,10 @@
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 3 * * *'
+    - cron: '0 19 * * *'
   push:
     branches:
-      - master
+      - gh-pages
     paths:
       - run_page/nike_sync.py
       - run_page/nike_to_strava_sync.py
