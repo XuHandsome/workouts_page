@@ -3,10 +3,10 @@
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 2 * * *'
+    - cron: '0 18 * * *'
   push:
     branches:
-      - vercel
+      - master
     paths:
       - run_page/nike_sync.py
       - run_page/nike_to_strava_sync.py
