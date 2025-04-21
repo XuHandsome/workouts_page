@@ -1,0 +1,36 @@
+﻿name: Sync Keep Data to Strava
+
+on: workflow_dispatch
+
+env:
+  RUN_TYPE: keep_to_strava_sync
+
+jobs:
+  sync:
+    name: Sync
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Set up Python
+        id: setup_python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: 'requirements.txt'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      # 同步keep数据到strava中, 已经修改keep_to_strava_sync, 默认running cycling
+      - name: Run sync Keep_to_strava script
+        if: env.RUN_TYPE == 'keep_to_strava_sync'
+        run: |
+            python run_page/keep_to_strava_sync.py ${{ secrets.KEEP_MOBILE }} ${{ secrets.KEEP_PASSWORD }} ${{ secrets.STRAVA_CLIENT_ID }} ${{ secrets.STRAVA_CLIENT_SECRET }} ${{ secrets.STRAVA_CLIENT_REFRESH_TOKEN }}
