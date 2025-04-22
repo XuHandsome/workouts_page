@@ -63,11 +63,21 @@ python run_page/gen_svg.py --from-db --type circular --use-localtime
 ```
 
 ## 自动化思路
-通过Action部署到[Page](https://up.ohops.org)
 
-所有数据通过strava维护, 理由是能改记录名称, 最终生成也会带上方便备注信息, 所以在定时任务 `run_data_sync` 中 `Run sync Strava script`步骤, `strava_sync.py`之前先运行`keep_to_strava_sync.py`
+通过[帽子云](https://dash.maoziyun.com/)部署`master`分支到[户外主页](https://r.ohops.org)
 
-然后加上keep的[ios快捷指令](https://github.com/yihong0618/running_page/blob/master/README-CN.md#%E5%BF%AB%E6%8D%B7%E6%8C%87%E4%BB%A4)触发action即可,目前也有定时任务每天凌晨3点自动运行, 主要是记得欢太健康更新数据后, 打开keep从欢太健康同步一下新增数据.
+之前通过Action部署到[Page](https://up.ohops.org)备份到`gh-pages`分支, 后面不再部署, 有需要再启用
+
+1. 运动后keep自动从欢太健康同步数据
+2. 此时可以手动运行快捷指令触发workflow`Sync Keep Data to Strava`, 这个workflow仅同步keep数据到strava
+3. 可以酌情登录手动修改[strava](https://www.strava.com/athlete/training)中活动信息
+4. 手动运行快捷指令触发workflow`Run Data Sync`, 也可以不触发, 定时任务每天凌晨2点自动运行
+5. `Run Data Sync` 会运行全步骤, 并且commit新的svg到master分支, 帽子云是监听`master`分支, 有commit会自动构建更新
+
+
+> 所有数据通过strava维护, 理由是能改记录名称, 最终生成也会带上方便备注信息, 所以在定时任务 `run_data_sync` 中 `Run sync Strava script`步骤, `strava_sync.py`之前先运行`keep_to_strava_sync.py`
+
+> 然后加上[ios快捷指令](https://github.com/yihong0618/running_page/blob/master/README-CN.md#%E5%BF%AB%E6%8D%B7%E6%8C%87%E4%BB%A4)触发action即可,目前也有定时任务每天凌晨3点自动运行, 主要是记得欢太健康更新数据后, 打开keep从欢太健康同步一下新增数据.
 
 ```bash
 TOKEN="CHANGEME"
