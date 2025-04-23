@@ -240,7 +240,7 @@ const ActivityList: React.FC = () => {
                 </button>
                 <select onChange={(e) => setActivityType(e.target.value)} value={activityType}>
                     { showTypes.map((type) => (
-                      <option value={type}>{TYPES_MAPPING[type]}</option>
+                        <option key={type} value={type}>{TYPES_MAPPING[type]}</option>
                     ))}
                 </select>
                 <select

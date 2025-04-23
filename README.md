@@ -3,6 +3,9 @@
 
 ## 一些个性化选项
 
+### summary页面添加站点更新状态
+通过[site-metadata.ts](./src/static/site-metadata.ts) `githubWorkflow` 配置workflow信息，即可在summary页面显示站点更新状态。
+
 ### 自定义运动颜色
 
 - 修改骑行颜色: `src/utils/const.js` 里的 `RIDE_COLOR`

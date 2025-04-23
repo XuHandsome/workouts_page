@@ -8,6 +8,11 @@ interface ISiteMetadataResult {
     name: string;
     url: string;
   }[];
+  githubWorkflow: {
+    owner: string;
+    repo: string;
+    workflowFile: string[];
+  };
 }
 
 const getBasePath = () => {
@@ -33,8 +38,17 @@ const data: ISiteMetadataResult = {
     {
       name: 'About',
       url: 'https://github.com/XuHandsome',
-    },
+    }
   ],
+  // summary页新增的github workflow运行状态
+  githubWorkflow: {
+    owner: 'XuHandsome',  // GitHub用户名
+    repo: 'workouts_page',  // 仓库名称
+    workflowFile: [
+      'keep_sync_strava.yml',
+      'run_data_sync.yml',
+    ]
+  },
 };
 
 export default data;
