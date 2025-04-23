@@ -62,4 +62,7 @@ export default defineConfig({
       },
     },
   },
+  server: {
+    host: true, // 允许从所有网络接口访问
+  },
 });
