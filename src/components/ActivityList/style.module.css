@@ -26,6 +26,7 @@
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  transition: opacity 0.3s ease;
 }
 
 .activityCard {
@@ -68,6 +69,30 @@
   color: rgb(204, 204, 204);
 }
 
+/* 新增专属样式类 */
+.siteStatusButton {
+    padding: 4px 12px;
+    background-color: transparent;
+    border: 1px solid rgb(0, 237, 94);
+    border-radius: 4px;
+    color: rgb(0, 237, 94);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 20px;
+}
+
+.siteStatusButton.active {
+    background-color: rgb(0, 237, 94);
+    box-shadow: 0 0 8px rgba(0, 237, 94, 0.5);
+    color: #000;
+}
+
+.siteStatusButton:focus {
+  outline: 2px solid rgba(0, 237, 94, 0.5);
+}
+
+/* 保留原有Home按钮样式 */
 .smallHomeButton {
     padding: 4px 12px;
     background-color: rgb(0, 237, 94);
@@ -89,4 +114,13 @@
     background-color: #2d2d2d;
     border-radius: 8px;
     margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .filterContainer {
+    flex-wrap: wrap;
+  }
+  .siteStatusButton {
+    margin-top: 8px;
+  }
 }

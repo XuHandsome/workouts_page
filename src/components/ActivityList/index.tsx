@@ -252,8 +252,8 @@ const ActivityList: React.FC = () => {
                     Home
                 </button>
                 <button
-                    className={styles.smallHomeButton}
-                    onClick={() => setShowWorkflowStatus(!showWorkflowStatus)} // 修改点击事件
+                    className={`${styles.siteStatusButton} ${showWorkflowStatus ? styles.active : ''}`}
+                    onClick={() => setShowWorkflowStatus(!showWorkflowStatus)}
                 >
                     Site Status
                 </button>

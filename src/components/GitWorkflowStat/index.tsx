@@ -62,9 +62,9 @@ const WorkflowStatus = () => {
     <table className={styles.table}>
       <thead>
         <tr>
-          <th className={styles.th}>Workflow Name</th>
-          <th className={styles.th}>Last Build Status</th>
-          <th className={styles.th}>Last Build Time</th>
+          <th className={styles.th}>Workflow</th>
+          <th className={styles.th}>Last Build</th>
+          <th className={styles.th}>Time</th>
         </tr>
       </thead>
       <tbody>
