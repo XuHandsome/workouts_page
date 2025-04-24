@@ -1,23 +1,27 @@
 .table {
   width: 100%;
+  border-collapse: collapse;
 }
 
 .th {
   text-align: left;
   padding: 0.5rem;
+  border-bottom: 1px solid rgb(60, 60, 60); /* 加深灰度值 */
 }
 
 .td {
   padding: 0.5rem;
+  border-bottom: 1px solid rgb(60, 60, 60); /* 同步更新单元格分割线 */
 }
 
 .link {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 0.75rem;
   background-color: #3b82f6;
-  color: white;
+  color: rgb(204,204,204);
   border-radius: 0.25rem;
   transition: background-color 0.2s;
+  line-height: 1.5rem;
 }
 
 .link:hover {
