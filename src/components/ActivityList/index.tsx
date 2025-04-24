@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import activities from '@/static/activities.json';
 import styles from './style.module.css';
 import {ACTIVITY_TOTAL, TYPES_MAPPING} from "@/utils/const";
+import WorkflowStatus from '@/components/GitWorkflowStat';
 
 // Define interfaces for our data structures
 interface Activity {
@@ -146,12 +147,23 @@ const ActivityCard: React.FC<ActivityCardProps> = ({ period, summary, dailyDista
     );
 };
 
+const WorkflowStatusCard: React.FC = () => {
+    return (
+        <div className={styles.workflowStatusCard}>
+            <WorkflowStatus />
+        </div>
+    );
+};
+
 const ActivityList: React.FC = () => {
     const [interval, setInterval] = useState<IntervalType>('month');
     const [activityType, setActivityType] = useState<string>('run');
+    const [showWorkflowStatus, setShowWorkflowStatus] = useState(false); // 新增状态
     const navigate = useNavigate();
     const playTypes = new Set((activities as Activity[]).map(activity => activity.type.toLowerCase()));
-    const showTypes =[...playTypes].filter(type => type in TYPES_MAPPING);
+    const showTypes = [...playTypes].filter((type): type is keyof typeof TYPES_MAPPING =>
+      type in TYPES_MAPPING
+    ) as Array<keyof typeof TYPES_MAPPING>;
 
     const toggleInterval = (newInterval: IntervalType): void => {
         setInterval(newInterval);
@@ -180,7 +192,7 @@ const ActivityList: React.FC = () => {
                     key = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}`; // Zero padding
                     index = date.getDate() - 1; // Return current day (0-30)
                     break;
-                case 'week':
+                case 'week': {
                     const currentDate = new Date(date.valueOf());
                     currentDate.setDate(currentDate.getDate() + 4 - (currentDate.getDay() || 7)); // Set to nearest Thursday (ISO weeks defined by Thursday)
                     const yearStart = new Date(currentDate.getFullYear(), 0, 1);
@@ -188,6 +200,7 @@ const ActivityList: React.FC = () => {
                     key = `${currentDate.getFullYear()}-W${weekNum.toString().padStart(2, '0')}`;
                     index = (date.getDay() + 6) % 7; // Return current day (0-6, Monday-Sunday)
                     break;
+                }
                 case 'day':
                     key = date.toLocaleDateString("zh").replaceAll('/', '-'); // Format date as YYYY-MM-DD
                     index = 0; // Return 0
@@ -238,9 +251,17 @@ const ActivityList: React.FC = () => {
                 >
                     Home
                 </button>
+                <button
+                    className={styles.smallHomeButton}
+                    onClick={() => setShowWorkflowStatus(!showWorkflowStatus)} // 修改点击事件
+                >
+                    Site Status
+                </button>
                 <select onChange={(e) => setActivityType(e.target.value)} value={activityType}>
                     { showTypes.map((type) => (
-                        <option key={type} value={type}>{TYPES_MAPPING[type]}</option>
+                        <option key={type} value={type}>
+                            {TYPES_MAPPING[type]}
+                        </option>
                     ))}
                 </select>
                 <select
@@ -254,38 +275,42 @@ const ActivityList: React.FC = () => {
                 </select>
             </div>
             <div className={styles.summaryContainer}>
-                {Object.entries(activitiesByInterval)
-                    .sort(([a], [b]) => {
-                        if (interval === 'day') {
-                            return new Date(b).getTime() - new Date(a).getTime(); // Sort by date
-                        } else if (interval === 'week') {
-                            const [yearA, weekA] = a.split('-W').map(Number);
-                            const [yearB, weekB] = b.split('-W').map(Number);
-                            return yearB - yearA || weekB - weekA; // Sort by year and week number
-                        } else {
-                            const [yearA, monthA = 0] = a.split('-').map(Number);
-                            const [yearB, monthB = 0] = b.split('-').map(Number);
-                            return yearB - yearA || monthB - monthA; // Sort by year and month
-                        }
-                    })
-                    .map(([period, summary]) => (
-                        <ActivityCard
-                            key={period}
-                            period={period}
-                            summary={{
-                                totalDistance: summary.totalDistance,
-                                averageSpeed: summary.totalTime ? (summary.totalDistance / (summary.totalTime / 3600)) : 0,
-                                totalTime: summary.totalTime,
-                                count: summary.count,
-                                maxDistance: summary.maxDistance,
-                                maxSpeed: summary.maxSpeed,
-                                location: summary.location,
-                            }}
-                            dailyDistances={summary.dailyDistances}
-                            interval={interval}
-                            activityType={activityType}
-                        />
-                    ))}
+                {showWorkflowStatus ? (
+                    <WorkflowStatusCard />
+                ) : (
+                    Object.entries(activitiesByInterval)
+                        .sort(([a], [b]) => {
+                            if (interval === 'day') {
+                                return new Date(b).getTime() - new Date(a).getTime(); // Sort by date
+                            } else if (interval === 'week') {
+                                const [yearA, weekA] = a.split('-W').map(Number);
+                                const [yearB, weekB] = b.split('-W').map(Number);
+                                return yearB - yearA || weekB - weekA; // Sort by year and week number
+                            } else {
+                                const [yearA, monthA = 0] = a.split('-').map(Number);
+                                const [yearB, monthB = 0] = b.split('-').map(Number);
+                                return yearB - yearA || monthB - monthA; // Sort by year and month
+                            }
+                        })
+                        .map(([period, summary]) => (
+                            <ActivityCard
+                                key={period}
+                                period={period}
+                                summary={{
+                                    totalDistance: summary.totalDistance,
+                                    averageSpeed: summary.totalTime ? (summary.totalDistance / (summary.totalTime / 3600)) : 0,
+                                    totalTime: summary.totalTime,
+                                    count: summary.count,
+                                    maxDistance: summary.maxDistance,
+                                    maxSpeed: summary.maxSpeed,
+                                    location: summary.location,
+                                }}
+                                dailyDistances={summary.dailyDistances}
+                                interval={interval}
+                                activityType={activityType}
+                            />
+                        ))
+                )}
             </div>
         </div>
     );
