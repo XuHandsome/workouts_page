@@ -72,10 +72,12 @@
 /* 新增专属样式类 */
 .siteStatusButton {
     padding: 4px 12px;
-    background-color: transparent;
-    border: 1px solid rgb(0, 237, 94);
+    /* background-color: transparent; */
+    background-color: rgb(36, 36, 36);
+    /* border: 1px solid rgb(255, 255, 255); */
     border-radius: 4px;
-    color: rgb(0, 237, 94);
+    /* color: rgb(36, 36, 36); */
+    color: rgb(204,204,204);
     cursor: pointer;
     font-size: 14px;
     font-weight: 500;
@@ -86,10 +88,6 @@
     background-color: rgb(0, 237, 94);
     box-shadow: 0 0 8px rgba(0, 237, 94, 0.5);
     color: #000;
-}
-
-.siteStatusButton:focus {
-  outline: 2px solid rgba(0, 237, 94, 0.5);
 }
 
 /* 保留原有Home按钮样式 */
