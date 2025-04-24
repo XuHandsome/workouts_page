@@ -32,12 +32,13 @@ const data: ISiteMetadataResult = {
       url: `${getBasePath()}/summary`,
     },
     {
-      name: 'Blog',
-      url: 'https://www.ohops.org',
-    },
-    {
       name: 'About',
       url: 'https://github.com/XuHandsome',
+    }
+    ,
+    {
+      name: 'Source',
+      url: 'https://github.com/XuHandsome/workouts_page',
     }
   ],
   // summary页新增的github workflow运行状态
