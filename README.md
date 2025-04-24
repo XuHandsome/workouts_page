@@ -73,7 +73,7 @@ python run_page/gen_svg.py --from-db --type circular --use-localtime
 之前通过Action部署到[Page](https://up.ohops.org)备份到`gh-pages`分支, 后面不再部署, 有需要再启用
 
 1. 运动后keep自动从欢太健康同步数据
-2. 此时可以手动运行快捷指令触发workflow`Sync Keep Data to Strava`, 这个workflow仅同步keep数据到strava
+2. 此时可以手动运行快捷指令触发workflow`Keep to Strava`, 这个workflow仅同步keep数据到strava
 3. 可以酌情登录手动修改[strava](https://www.strava.com/athlete/training)中活动信息
 4. 手动运行快捷指令触发workflow`Run Data Sync`, 也可以不触发, 定时任务每天凌晨2点自动运行
 5. `Run Data Sync` 会运行全步骤, 并且commit新的svg到master分支, 帽子云是监听`master`分支, 有commit会自动构建更新

@@ -1,4 +1,4 @@
-﻿name: Sync Keep Data to Strava
+﻿name: Keep to Strava
 
 on: workflow_dispatch
 
