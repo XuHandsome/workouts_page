@@ -5,6 +5,7 @@
 
 ### summary页面添加站点更新状态
 通过[site-metadata.ts](./src/static/site-metadata.ts) `githubWorkflow` 配置workflow信息，即可在summary页面显示站点更新状态。
+> 需要说明的是， 点击Site Status按钮展示的Workflow 运行状况是配置了自动定时刷新的，停滞页面会自动刷新。由于Github Api的请求频率限制（每小时单ip不超过60次），刷新的频率取决于[site-metadata.ts](./src/static/site-metadata.ts)`githubWorkflow.workflowFile`列表的长度，自动计算刷新间隔，来控制不超过Github官方的限流。
 
 ### 自定义运动颜色
 
