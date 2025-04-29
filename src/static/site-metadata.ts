@@ -32,8 +32,8 @@ const data: ISiteMetadataResult = {
       url: `${getBasePath()}/summary`,
     },
     {
-      name: 'About',
-      url: 'https://github.com/XuHandsome',
+      name: 'Wiki',
+      url: 'https://deepwiki.com/XuHandsome/workouts_page',
     }
     ,
     {
