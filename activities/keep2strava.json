@@ -634,5 +634,23 @@
 "name": "Ride from keep",
 "type": "Ride",
 "gpx_file_path": "/home/runner/work/workouts_page/workouts_page/GPX_OUT/9223370289580223807.gpx"
+},
+{
+"run_id": 9223370289451557807,
+"name": "Run from keep",
+"type": "Run",
+"gpx_file_path": "/home/runner/work/workouts_page/workouts_page/GPX_OUT/9223370289451557807.gpx"
+},
+{
+"run_id": 9223370289458376807,
+"name": "Ride from keep",
+"type": "Ride",
+"gpx_file_path": "/home/runner/work/workouts_page/workouts_page/GPX_OUT/9223370289458376807.gpx"
+},
+{
+"run_id": 9223370289494075807,
+"name": "Ride from keep",
+"type": "Ride",
+"gpx_file_path": "/home/runner/work/workouts_page/workouts_page/GPX_OUT/9223370289494075807.gpx"
 }
 ]
