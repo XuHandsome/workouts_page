@@ -71,45 +71,45 @@
 
 /* 新增专属样式类 */
 .siteStatusButton {
-    padding: 4px 12px;
-    /* background-color: transparent; */
-    background-color: rgb(36, 36, 36);
-    /* border: 1px solid rgb(255, 255, 255); */
-    border-radius: 4px;
-    /* color: rgb(36, 36, 36); */
-    color: rgb(204,204,204);
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 500;
-    margin-right: 20px;
+  padding: 4px 12px;
+  /* background-color: transparent; */
+  background-color: rgb(36, 36, 36);
+  /* border: 1px solid rgb(255, 255, 255); */
+  border-radius: 4px;
+  /* color: rgb(36, 36, 36); */
+  color: rgb(204, 204, 204);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 20px;
 }
 
 .siteStatusButton.active {
-    background-color: rgb(0, 237, 94);
-    box-shadow: 0 0 8px rgba(0, 237, 94, 0.5);
-    color: #000;
+  background-color: rgb(0, 237, 94);
+  box-shadow: 0 0 8px rgba(0, 237, 94, 0.5);
+  color: #000;
 }
 
 /* 保留原有Home按钮样式 */
 .smallHomeButton {
-    padding: 4px 12px;
-    background-color: rgb(0, 237, 94);
-    color: #000;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 500;
-    margin-right: 20px;
+  padding: 4px 12px;
+  background-color: rgb(0, 237, 94);
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 20px;
 }
 
 .smallHomeButton:hover {
-    background-color: rgb(0, 237, 94);
+  background-color: rgb(0, 237, 94);
 }
 
 .workflowStatusCard {
-    padding: 20px;
-    background-color: #2d2d2d;
-    border-radius: 8px;
-    margin-bottom: 20px;
+  padding: 20px;
+  background-color: #2d2d2d;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
