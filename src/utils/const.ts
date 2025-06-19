@@ -43,7 +43,7 @@ const ROAD_LABEL_DISPLAY = true;
 const PRIVACY_MODE = false;
 // update for now 2024/11/17 the lights on default is false
 //set to `false` if you want to make light off as default, only effect when `PRIVACY_MODE` = false
-const LIGHTS_ON =true;
+const LIGHTS_ON = true;
 // richer title for the activity types (like garmin style)
 const RICH_TITLE = true;
 
@@ -51,14 +51,15 @@ const RICH_TITLE = true;
 const IS_CHINESE = true;
 const USE_ANIMATION_FOR_GRID = false;
 const CHINESE_INFO_MESSAGE = (yearLength: number, year: string): string =>
-  `这 ${yearLength} 年 ` + ( year === 'Total' ? '' : `，地图展示的是 ${year} 年的轨迹`);
+  `野了 ${yearLength} 年 ` +
+  (year === 'Total' ? '' : `，地图展示的是 ${year} 年的轨迹`);
 
 const ENGLISH_INFO_MESSAGE = (yearLength: number, year: string): string =>
-  `Logged ${yearLength} Years of Outdoor Journey` +  ( year === 'Total' ? '' : `, the map show routes in ${year}`);
+  `Logged ${yearLength} Years of Outdoor Journey` +
+  (year === 'Total' ? '' : `, the map show routes in ${year}`);
 
 // not support English for now
-const CHINESE_LOCATION_INFO_MESSAGE_FIRST =
-  '生活原本沉闷';
+const CHINESE_LOCATION_INFO_MESSAGE_FIRST = '生活原本沉闷';
 const CHINESE_LOCATION_INFO_MESSAGE_SECOND = '但跑起来就有风';
 
 const INFO_MESSAGE = IS_CHINESE ? CHINESE_INFO_MESSAGE : ENGLISH_INFO_MESSAGE;
@@ -114,31 +115,31 @@ const RUN_TITLES = {
 };
 
 const TYPES_MAPPING = {
-  'run': RUN_TITLES.RUN_TITLE,
+  run: RUN_TITLES.RUN_TITLE,
   'trail run': RUN_TITLES.TRAIL_RUN_TITLE,
-  'swim': RUN_TITLES.SWIM_TITLE,
-  'ride': RUN_TITLES.RIDE_TITLE,
-  'virtualride': RUN_TITLES.VIRTUAL_RIDE_TITLE,
-  'hike': RUN_TITLES.HIKE_TITLE,
-  'rowing': RUN_TITLES.ROWING_TITLE,
-  'kayaking': RUN_TITLES.KAYAKING_TITLE,
-  'snowboard': RUN_TITLES.SNOWBOARD_TITLE,
-  'ski': RUN_TITLES.SKI_TITLE,
-  'roadtrip': RUN_TITLES.ROAD_TRIP_TITLE,
-}
+  swim: RUN_TITLES.SWIM_TITLE,
+  ride: RUN_TITLES.RIDE_TITLE,
+  virtualride: RUN_TITLES.VIRTUAL_RIDE_TITLE,
+  hike: RUN_TITLES.HIKE_TITLE,
+  rowing: RUN_TITLES.ROWING_TITLE,
+  kayaking: RUN_TITLES.KAYAKING_TITLE,
+  snowboard: RUN_TITLES.SNOWBOARD_TITLE,
+  ski: RUN_TITLES.SKI_TITLE,
+  roadtrip: RUN_TITLES.ROAD_TRIP_TITLE,
+};
 
 const ACTIVITY_TOTAL = {
-    ACTIVITY_COUNT_TITLE,
-    MAX_DISTANCE_TITLE,
-    MAX_SPEED_TITLE,
-    TOTAL_TIME_TITLE,
-    AVERAGE_SPEED_TITLE,
-    TOTAL_DISTANCE_TITLE,
-    YEARLY_TITLE,
-    MONTHLY_TITLE,
-    WEEKLY_TITLE,
-    DAILY_TITLE,
-    LOCATION_TITLE
+  ACTIVITY_COUNT_TITLE,
+  MAX_DISTANCE_TITLE,
+  MAX_SPEED_TITLE,
+  TOTAL_TIME_TITLE,
+  AVERAGE_SPEED_TITLE,
+  TOTAL_DISTANCE_TITLE,
+  YEARLY_TITLE,
+  MONTHLY_TITLE,
+  WEEKLY_TITLE,
+  DAILY_TITLE,
+  LOCATION_TITLE,
 };
 
 export {
@@ -173,8 +174,8 @@ const IKB = 'rgb(0,47,167)';
 const dark_vanilla = 'rgb(228,212,220)';
 const gold = 'rgb(242,190,69)';
 const purple = 'rgb(154,118,252)';
-const veryPeri = 'rgb(105,106,173)';//长春花蓝
-const red = 'rgb(255,0,0)';//大红色
+const veryPeri = 'rgb(105,106,173)'; //长春花蓝
+const red = 'rgb(255,0,0)'; //大红色
 
 // If your map has an offset please change this line
 // issues #92 and #198
