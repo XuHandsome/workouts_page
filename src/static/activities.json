@@ -2638,5 +2638,37 @@
 "elevation_gain": 0.0,
 "source": "strava",
 "streak": 5
+},
+{
+"run_id": 14965134410,
+"name": "\u6668\u95f4\u9a91\u884c",
+"distance": 2173.7,
+"moving_time": "0:09:53",
+"type": "Ride",
+"start_date": "2025-06-30 01:44:58+00:00",
+"start_date_local": "2025-06-30 09:44:58",
+"location_country": "\u54c8\u5bc6\u8def, \u5317\u65b0\u6cfe\u8857\u9053, \u65b0\u6cfe\u9547, \u957f\u5b81\u533a, \u4e0a\u6d77\u5e02, 200333, \u4e2d\u56fd",
+"summary_polyline": "syo}D_fxcV{@_@_@Lg@vDWhEc@`FGfA_@`FMhAa@`Gk@tGAh@OzACr@_AfLMv@GbCQzAKdBg@`GWlBGvAYnDEfASfBUvCk@`Dw@vDSvAHNVFPAACIDk@FCLCn@IXMpAIPE^KJAH@NGZEFGB",
+"average_heartrate": 122.8,
+"average_speed": 3.666,
+"elevation_gain": 0.0,
+"source": "strava",
+"streak": 6
+},
+{
+"run_id": 14965134419,
+"name": "\u508d\u665a\u8dd1\u6b65",
+"distance": 9876.9,
+"moving_time": "1:10:28",
+"type": "Run",
+"start_date": "2025-06-30 12:15:24+00:00",
+"start_date_local": "2025-06-30 20:15:24",
+"location_country": "\u5149\u590d\u897f\u8def, \u771f\u5317, \u957f\u5f81\u9547, \u666e\u9640\u533a, \u4e0a\u6d77\u5e02, 200333, \u4e2d\u56fd",
+"summary_polyline": "}eq}DchxcV\\DNF|BbHJv@Ip@IVOTIDm@B]Fc@JYPm@h@g@x@SRYN{CzBgAvAq@n@QVK^K~Aa@~KG\\KTSJq@GK@SHKLGTOrAITOPe@XWHY@g@Ac@MM?}@Rq@JOFg@l@SJKBo@ASBIJ@RHNPPLFJ@HATM^[NWN_@HILAZ@nBSbAAx@KVGh@Wf@q@DKBOAaAFa@FI\\?LILKH[l@}NB[FQNWr@q@jA{AnBwA`@_@b@UPSj@w@b@e@ZQf@OVEv@EPQL_@Hs@AMKi@c@oAa@wAi@{Ak@aCIS?BJRd@vBj@bBd@`BZx@Nj@@NCb@ETM\\MRKB{@Bs@RWLe@d@m@|@WV]P_@ZoBvAkAzAm@j@SXKTC^k@xMGl@ITMLI@m@IWDKDQ^MrAGPU\\a@T_@Hu@?q@O_ARq@JOFe@j@QJ_@Fg@Ea@HOFORSb@ALBDXb@Tr@BZEbA@NXxAp@bHNhAEd@EhAQjAsAdCaA`Ak@^i@X{CpAsC~@_CbAg@Hm@d@cDjBYLk@ZgBzAeG|EcCdBaCfAcDrAoB`AgFxBzCmAbEmBzGwC~DwCnEmDjB_Bl@Sb@]pBiAfAu@|@W|BaAjC}@jBu@x@_@rA{@^[RW^k@n@sABc@Ry@BgAD_@?OMo@c@_EEo@MgASoAA[BiAQm@]q@A[BIN[LILF^HV@TCHKHAVMZe@ZQdBQ`BDZAXHJC`@MXOr@{@DI@OCa@?e@H[LIXANGHMFYd@oLJwALk@HMt@s@|@kATU|AiA\\Yv@g@n@_Af@e@\\W\\Kd@If@CNENSL]DW@c@Ie@yByGKUSWGO?IF?FH?DECEBFL?YGCl@@vBGhAM^?tBFvBErB?nAEvAFz@Ed@?HB@C",
+"average_heartrate": 147.2,
+"average_speed": 2.336,
+"elevation_gain": 21.1,
+"source": "strava",
+"streak": 6
 }
 ]
