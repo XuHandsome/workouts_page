@@ -2702,5 +2702,21 @@
 "elevation_gain": 10.0,
 "source": "strava",
 "streak": 8
+},
+{
+"run_id": 14997243816,
+"name": "\u6668\u95f4\u9a91\u884c",
+"distance": 2408.0,
+"moving_time": "0:12:49",
+"type": "Ride",
+"start_date": "2025-07-03 01:41:58+00:00",
+"start_date_local": "2025-07-03 09:41:58",
+"location_country": "\u54c8\u5bc6\u8def, \u5317\u65b0\u6cfe\u8857\u9053, \u65b0\u6cfe\u9547, \u957f\u5b81\u533a, \u4e0a\u6d77\u5e02, 200333, \u4e2d\u56fd",
+"summary_polyline": "aso}DiaxcV_D_BcAc@MK_@GGDMT]rAOnAEd@SrDA\\@PCb@s@lHsAvPIx@ABWzDCvAM|AKl@QzAOnBIl@O~A_@xG}@fJKtBu@pJKz@Ex@G`@m@bDs@pDSt@KLDjAQ|@Cd@Of@Cf@SRAZGXKBU@IBM?MEGKICK@DVDFJBBRIt@?\\PRFBHIKS",
+"average_heartrate": 117.1,
+"average_speed": 3.131,
+"elevation_gain": 3.2,
+"source": "strava",
+"streak": 9
 }
 ]
