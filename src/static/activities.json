@@ -1095,7 +1095,7 @@
 "type": "Ride",
 "start_date": "2025-04-23 11:36:19+00:00",
 "start_date_local": "2025-04-23 19:36:19",
-"location_country": "\u534f\u548c\u8def, \u65b0\u6cfe\u9547, \u957f\u5b81\u533a, 200335, \u4e2d\u56fd",
+"location_country": null,
 "summary_polyline": "sop}D}ktcVCq@`@kBFqAF]h@yBZsBFKBa@A_@@YJmAH]DiADKBUDsANs@?UNwAHyA~@}LViCFmAnAgPt@mKjAoNZkERgELsA^aCHSRETF~Al@h@Lz@^DARBJ]LGBKHIDM?MCKKIYIAIJQA]FM?YBA@B",
 "average_heartrate": 103.7,
 "average_speed": 3.207,
