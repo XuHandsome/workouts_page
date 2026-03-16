@@ -4103,7 +4103,7 @@
 "type": "Run",
 "start_date": "2025-12-19 12:05:21+00:00",
 "start_date_local": "2025-12-19 20:05:21",
-"location_country": "\u54c8\u5bc6\u8def, \u4e0a\u6d77\u5e02, 200333, \u4e2d\u56fd",
+"location_country": null,
 "summary_polyline": "sro}DyexcVEn@GRQPMFODQAeD{AkAYaDcBm@KcAGm@AAAs@D{@@}@@sBE_BDkB?_CBeDEw@BwANm@@AJBDB@@I",
 "average_heartrate": 149.1,
 "average_speed": 3.103,
