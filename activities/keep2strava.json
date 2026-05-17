@@ -1780,5 +1780,11 @@
 "name": "Run from keep",
 "type": "Run",
 "gpx_file_path": "/home/runner/work/workouts_page/workouts_page/GPX_OUT/9223370257907829807.gpx"
+},
+{
+"run_id": 9223370257828809807,
+"name": "Run from keep",
+"type": "Run",
+"gpx_file_path": "/home/runner/work/workouts_page/workouts_page/GPX_OUT/9223370257828809807.gpx"
 }
 ]
